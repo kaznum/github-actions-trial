@@ -1,0 +1,11 @@
+services:
+  app:
+    container_name: go-app
+    image: go-app
+    build:
+      context: ./
+    volumes:
+      - "./:/code"
+    stdin_open: true
+    tty: true
+    working_dir: /code
